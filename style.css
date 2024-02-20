@@ -30,7 +30,7 @@ body {
 }
 
 .wr-main {
-  position: absolute;
+  position: fixed;
   background: radial-gradient(
     600px at 0px 0px,
     rgba(29, 78, 216, 0.15),
@@ -46,6 +46,27 @@ body {
   padding: 0 15%;
 }
 
+@media only screen and (max-width: 1200px) {
+  .wr-content {
+    padding: 0 10%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .wr-content {
+    padding: 0 5%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .wr-content {
+    flex-direction: column;
+  }
+
+  /* .wr-left-nav {
+    display: hidden;
+  } */
+}
 .wrc-left,
 .wrc-right {
   padding: 6rem 1rem;
