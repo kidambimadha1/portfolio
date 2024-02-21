@@ -46,6 +46,13 @@ body {
   padding: 0 15%;
 }
 
+#wrc-left-wrap {
+  position: fixed;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
 @media only screen and (max-width: 1200px) {
   .wr-content {
     padding: 0 10%;
@@ -63,10 +70,22 @@ body {
     flex-direction: column;
   }
 
-  /* .wr-left-nav {
-    display: hidden;
-  } */
+  .wrc-left,
+  .wrc-right {
+    width: 100% !important;
+  }
+  .wrc-right {
+    padding: 3rem 1rem !important;
+  }
+
+  #wrc-left-wrap {
+    position: relative;
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
 }
+
 .wrc-left,
 .wrc-right {
   padding: 6rem 1rem;
@@ -77,6 +96,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
   min-height: 100vh;
   overflow: hidden;
 
