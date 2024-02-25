@@ -23,4 +23,4 @@ function addHoverForLinks() {
   }
 }
 
-addHoverForLinks()
+addHoverForLinks();

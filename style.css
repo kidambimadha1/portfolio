@@ -9,6 +9,10 @@
   --tw-bg-opacity: 1;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: rgb(var(--bg-color) / var(--tw-bg-opacity));
   color: white;
@@ -42,7 +46,6 @@ body {
 .wr-content {
   display: flex;
   width: 100%;
-  height: 100vh;
   padding: 0 15%;
 }
 
@@ -50,6 +53,7 @@ body {
   position: fixed;
   overflow: hidden;
   display: flex;
+  padding-top: 1rem;
   flex-direction: column;
 }
 
@@ -196,4 +200,87 @@ body {
 .wrc-right p {
   font-size: 1rem;
   opacity: 0.6;
+}
+
+.wrc-right section {
+  padding-top: 1rem;
+}
+
+.experience header {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.experience {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.experience:hover {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 6px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.3px);
+  -webkit-backdrop-filter: blur(1.3px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.wrc-right section:not(:first-of-type) {
+  padding: 3rem 0;
+}
+
+.experience .container {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  justify-items: start;
+  align-items: baseline;
+}
+
+.sub-item {
+  display: block;
+  padding: 0.5rem 0;
+}
+
+.sub-item.title,
+.item.item-1 {
+  opacity: 0.8;
+}
+
+.sub-item.role {
+  opacity: 0.5;
+}
+
+.sub-item.desc {
+  opacity: 0.7;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.sub-item.tags {
+  font-size: 14px;
+  opacity: 0.8;
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      color: aquamarine;
+      padding: 6px;
+      margin: 2px;
+      background: rgba(50, 70, 70, 0.8);
+      backdrop-filter: saturate(180%) blur(10px);
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  }
+}
+
+#awards .desc {
+  opacity: 0.7;
+  li {
+    padding: 6px 0;
+  }
 }
