@@ -284,3 +284,27 @@ body {
     padding: 6px 0;
   }
 }
+
+.top {
+  bottom: 20px;
+  position: fixed;
+  right: 20px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: rgba(50, 70, 70, 0.8);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  opacity: 0.8;
+
+  span {
+    font-size: 30px;
+    color: aquamarine;
+    font-weight: 400;
+  }
+}
+
+.top:hover {
+  opacity: 1;
+}
