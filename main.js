@@ -29,3 +29,20 @@ const topElem = document.getElementsByClassName('top')
 topElem[0].addEventListener('click', () => {
   window.scrollTo(0, 0);
 })
+
+const sections = Array.from(document.querySelectorAll('section#about,section#experience,section#awards'));
+const navLinks = Array.from(document.querySelectorAll('a[href="#about"],a[href="#experience"],a[href="#awards"]'))
+function navLinkChange(e) {
+  let offsets = sections.map(x => x.getBoundingClientRect());
+  offsets.forEach((x, i) => {
+    if (window.scrollY > x.top) {
+      navLinks.forEach(x => x.classList.remove('active'));
+      navLinks[i].classList.toggle('active');
+      return;
+    }
+  })
+}
+
+window.addEventListener('scroll', navLinkChange);
+
+window.removeEventListener('unload', navLinkChange);
