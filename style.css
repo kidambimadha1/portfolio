@@ -227,14 +227,20 @@ body {
 }
 
 .wrc-right section:not(:first-of-type) {
-  padding: 3rem 0;
+  padding: 2.5rem 0;
 }
 
 .experience .container {
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 38% 62%;
   justify-items: start;
   align-items: baseline;
+}
+
+@media screen and (max-width: 600px){
+  .experience .container {
+    grid-template-columns: 100%;
+  } 
 }
 
 .sub-item {
