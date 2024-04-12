@@ -33,6 +33,9 @@ topElem[0].addEventListener('click', () => {
 const sections = Array.from(document.querySelectorAll('section#about,section#experience,section#awards'));
 const navLinks = Array.from(document.querySelectorAll('a[href="#about"],a[href="#experience"],a[href="#awards"]'))
 function navLinkChange(e) {
+
+  // document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight))
+
   let offsets = sections.map(x => x.getBoundingClientRect());
   offsets.forEach((x, i) => {
     if (window.scrollY > x.top) {
