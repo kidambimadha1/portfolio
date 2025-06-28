@@ -1,51 +1,47 @@
-function addBackgroundHover() {
-  const el = document.getElementsByClassName('wr-main');
-  document.addEventListener('mousemove', (e) => {
-    if (el[0]) {
-      el[0].setAttribute('style', `background:radial-gradient(600px at ${e.clientX}px ${e.clientY}px, rgba(29, 78, 216, 0.15), transparent 80%);`);
-    }
-  })
-}
+// Loader overlay
+window.addEventListener("load", function () {
+  const overlay = document.getElementById("loadingOverlay");
+  overlay.classList.add("hidden");
+  setTimeout(() => overlay.style.display = "none", 400);
+});
 
-addBackgroundHover();
+// Scroll watcher bar
+window.addEventListener("scroll", function () {
+  const watcher = document.querySelector('.scroll-watcher');
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scrolled = docHeight > 0 ? (scrollTop / docHeight) : 0;
+  watcher.style.transform = `scaleX(${scrolled})`;
+});
 
-function addHoverForLinks() {
-  const el = document.querySelectorAll('.wrc-left-nav a');
-  for (let i = 0; i < el.length; i++) {
-    el[i].addEventListener('click', (e) => {
-
-      const elems = document.querySelectorAll('.wrc-left-nav a.active');
-      for (let i = 0; i < elems.length; i++) {
-        elems[i].classList.toggle('active');
-      }
-      el[i].classList.toggle('active');
-    });
+// Back to top button
+const topButton = document.getElementById("topButton");
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 200) {
+    topButton.classList.add("visible");
+  } else {
+    topButton.classList.remove("visible");
   }
-}
+});
+topButton.addEventListener("click", function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
 
-addHoverForLinks();
-
-const topElem = document.getElementsByClassName('top')
-topElem[0].addEventListener('click', () => {
-  window.scrollTo(0, 0);
-})
-
-const sections = Array.from(document.querySelectorAll('section#about,section#experience,section#awards'));
-const navLinks = Array.from(document.querySelectorAll('a[href="#about"],a[href="#experience"],a[href="#awards"]'))
-function navLinkChange(e) {
-
-  // document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight))
-
-  let offsets = sections.map(x => x.getBoundingClientRect());
-  offsets.forEach((x, i) => {
-    if (window.scrollY > x.top) {
-      navLinks.forEach(x => x.classList.remove('active'));
-      navLinks[i].classList.toggle('active');
-      return;
+// Navigation highlight on scroll
+const sections = document.querySelectorAll("main section");
+const navLinks = document.querySelectorAll(".wrc-left-nav a");
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 80;
+    if (window.scrollY >= sectionTop) {
+      current = section.getAttribute("id");
     }
-  })
-}
-
-window.addEventListener('scroll', navLinkChange);
-
-window.removeEventListener('unload', navLinkChange);
+  });
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});

@@ -1,215 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal website">
-  <meta name="author" content="Vishnuvardhan Eyunni">
+  <meta name="description" content="Portfolio">
+  <meta name="author" content="Kidambi Madhavan">
+  <title>Kidambi Madhavan</title>
   <link rel="stylesheet" href="style.css">
-  <title>Vishnuvardhan Eyunni</title>
-  <link rel="shortcut icon" href="images/favico-16.png" type="image/png" sizes="16x16">
-  <link rel="shortcut icon" href="images/favico-32.png" type="image/png" sizes="32x32">
-  <meta property="og:title" content="Vishnuvardhan Eyunni">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://vishnueyunni.vercel.app/images/img-site.png">
-  <meta property="og:url" content="https://vishnueyunni.vercel.app">
-  <meta property="og:description" content="Personal website">
-  <meta property="og:locale" content="en_US">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <div class="scroll-watcher"></div>
+  <div class="loading-overlay" id="loadingOverlay" aria-hidden="true">
+    <div class="loader" aria-label="Loading"></div>
+  </div>
+
+  <div class="animated-bg" aria-hidden="true">
+    <div class="floating-shapes">
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
+  </div>
+
+  <div class="scroll-watcher" aria-hidden="true"></div>
   <div class="wrapper">
     <div class="wr-main"></div>
     <div class="wr-content">
-      <div class="wrc-left">
+      <aside class="wrc-left" aria-label="Sidebar Navigation">
         <div id="wrc-left-wrap">
-          <div>
-            <h1>E Vishnuvardhan</h1>
-            <h2>Sr. Software Engineer at Capgemini</h2>
-            <p>I build pixel-perfect, engaging and accessible digital experiences.</p>
-          </div>
-          <nav class="wrc-left-nav">
+          <header>
+            <h1>Kidambi Madhavan</h1>
+            <h2>B.Tech CSE Student</h2>
+          </header>
+          <nav class="wrc-left-nav" aria-label="Section Navigation">
             <ul>
-              <li>
-                <a href="#about">
-                  <span class="nav-indicator"></span>
-                  <span class="nav-text">About</span>
-                </a>
-              </li>
-              <li>
-                <a href="#experience">
-                  <span class="nav-indicator"></span>
-                  <span class="nav-text">Experience</span>
-                </a>
-              </li>
-              <li>
-                <a href="#awards">
-                  <span class="nav-indicator"></span>
-                  <span class="nav-text">Awards and recognition</span>
-                </a>
-              </li>
+              <li><a href="#about"><span class="nav-indicator"></span><span class="nav-text">Career Objective</span></a></li>
+              <li><a href="#education"><span class="nav-indicator"></span><span class="nav-text">Education</span></a></li>
+              <li><a href="#skills"><span class="nav-indicator"></span><span class="nav-text">Technical Skills</span></a></li>
+              <li><a href="#projects"><span class="nav-indicator"></span><span class="nav-text">Projects</span></a></li>
+              <li><a href="#certifications"><span class="nav-indicator"></span><span class="nav-text">Certifications</span></a></li>
+              <li><a href="#achievements"><span class="nav-indicator"></span><span class="nav-text">Achievements</span></a></li>
+              <li><a href="#languages"><span class="nav-indicator"></span><span class="nav-text">Languages Known</span></a></li>
+              <li><a href="#hobbies"><span class="nav-indicator"></span><span class="nav-text">Hobbies & Interests</span></a></li>
             </ul>
           </nav>
         </div>
-      </div>
-      <div class="wrc-right">
-        <section id="about">
-          <div>
-            <p>Back in 2013, I decided to try my hand at building a slam book using wordpress and tumbled head first
-              into
-              the coding and web development. The same year I've graduated as a Computer Science Major.
-              I've landed a job, but as a suply chain
-              support analyst. It's a huge corporation and my role was part of the support team for a new warehouse
-              built. I went with the flow, but things did turn out good. I've had the opportunity to travel, meet and
-              work with the business teams on-site. I understood the nuances and had grown on how to conduct oneself,
-              and how documenting the process agreed upon and timely reporting of the changes are crucial for the
-              communication. </p>
+      </aside>
 
-            <p>I still felt the developer bug and somehow being functional wasn't enough and wanted to be more in
-              technical roles.
-              I've taken the first chance that got me out and joined up a product company as a Manual tester. The urge
-              to switch roles felt was far more than the role I intented to be in. It is here, I've
-              continued to grow and learn more about SDLC process. I've started coding and was able to transition the
-              roles and become an automation
-              tester. This had got me the confidence and I've had pushed myself and landed the role of a software
-              developer. </p>
-            <p>
-              The buzz around React had just started and I've found to give it a try and from
-              then I've had deep dived into the world of web development. It's been more than 5+ years by now since I
-              started to
-              work with web world and it has been a learning curve and I continue to grow.</p>
-            <p>My main focus these days is building products and leading projects for our clients at Capgemini. I enjoy
-              building software that look good but also built well under the hood.
-              When I'm not at the computer, I'm usually out enjoying a walk in the nature, listening to music or
-              watching
-              movies.</p>
+      <main class="wrc-right">
+        <section id="about" tabindex="-1">
+          <h2>Career Objective</h2>
+          <div class="enhanced-card">
+            <p>I'm a computer science student with expertise in different programming languages. I have strong knowledge in mathematics and possess strong analytical and judgment skills. I'm eager to apply my skills to real-world challenges and contribute to innovative technology solutions.</p>
           </div>
         </section>
-        <section id="experience">
-          <div class="experience">
-            <div class="container">
-              <header class="item item-1">2021 — Present</header>
-              <div class="item item-2">
-                <span class="sub-item title">Capgemini</span>
-                <span class="sub-item role">Consultant</span>
-                <span class="sub-item desc">
-                  As a consultant, I played a pivotal role in integration of web apps into different CRM's.
-                  Module separation, configuration based build outputs, dependency based custom invocations to cater to
-                  diverse array of clients. All this while maintaining the build, style, and ship high-quality websites.
-                  Provided design systems based solutions to solve performance oriented issues and make it a progressive
-                  web app.
-                </span>
-                <span class="sub-item tags">
-                  <ul>
-                    <li>Javascript</li>
-                    <li>Salesforce DX</li>
-                    <li>Apex Programming</li>
-                    <li>HTML & CSS</li>
-                    <li>React</li>
-                    <li>Workers</li>
-                    <li>Node.js</li>
-                    <li>webpack</li>
-                  </ul>
-                </span>
-              </div>
+
+        <section id="education" tabindex="-1">
+          <h2>Education</h2>
+          <div class="enhanced-card">
+            <p><strong>Siddhartha Academy of Higher Education, Vijayawada</strong><br>
+              Bachelor of Technology in Computer Science<br>
+              CGPA: 8.58 (2022–2026)
+            </p>
+          </div>
+        </section>
+
+        <section id="skills" tabindex="-1">
+          <h2>Technical Skills</h2>
+          <div class="enhanced-card">
+            <p><strong>Programming Languages:</strong></p>
+            <div class="skills-container">
+              <span class="skill-tag">C</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">SQL</span>
+            </div>
+            <p style="margin-top: 1.5rem;"><strong>Frameworks & Technologies:</strong></p>
+            <div class="skills-container">
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Express.js</span>
+              <span class="skill-tag">Flask</span>
+            </div>
+            <p style="margin-top: 1.5rem;"><strong>Database & Cloud:</strong></p>
+            <div class="skills-container">
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">MongoDB</span>
+              <span class="skill-tag">AWS</span>
+              <span class="skill-tag">GitHub</span>
             </div>
           </div>
         </section>
-        <section>
-          <div class="experience">
-            <div class="container">
-              <header class="item item-1">Jun 2016 — Apr 2021</header>
-              <div class="item item-2">
-                <span class="sub-item title">EMIS</span>
-                <span class="sub-item role">Senior Software Engineer</span>
-                <span class="sub-item desc">
-                  Commencing as an Associate Software Engineer and progressing to Consultant, I've assumed diverse roles
-                  across projects, showcasing leadership and team management skills while earning recognition for
-                  dedication. Developed UI component library, developed modules
-                  aligned with micro front end architecture, facilitating seamless cross-application communication.
-                  Played a pivotal role in client engagements, fostering clear
-                  communication channels and ensuring timely project delivery.
-                </span>
-                <span class="sub-item tags">
-                  <ul>
-                    <li>Typescript</li>
-                    <li>React</li>
-                    <li>Redux</li>
-                    <li>HTML & CSS</li>
-                    <li>Javascript</li>
-                    <li>Single SPA</li>
-                    <li>AWS</li>
-                    <li>Docker</li>
-                    <li>Node.js</li>
-                    <li>webpack</li>
-                  </ul>
-                </span>
-              </div>
+
+        <section id="projects" tabindex="-1">
+          <h2>Projects</h2>
+          <div class="project-card">
+            <div class="project-title">Leaf Disease Detection using CNN</div>
+            <ul>
+              <li>Designed and trained a CNN model achieving 94% accuracy in classifying common plant leaf diseases</li>
+              <li>Deployed the model using Flask with real-time predictions under 2 seconds</li>
+              <li>Used OpenCV for preprocessing, boosting accuracy by 12%</li>
+            </ul>
+          </div>
+          <div class="project-card">
+            <div class="project-title">AI Smart Trolley System</div>
+            <ul>
+              <li>Created an AI-powered trolley using YOLOv8, reducing checkout time by 60%</li>
+              <li>Integrated Raspberry Pi, LCD, and Android app for dynamic pricing and tracking</li>
+              <li>Achieved 92% detection accuracy on 10 product classes using a custom dataset</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="certifications" tabindex="-1">
+          <h2>Certifications</h2>
+          <div class="enhanced-card">
+            <ul>
+              <li>Linux Essentials – Cisco</li>
+              <li>Machine Learning – Infosys Springboard</li>
+              <li>Cyber Security – Cisco</li>
+              <li>Data Science – HarvardX</li>
+              <li>CCNA – Cisco Certified Network Associate</li>
+              <li>Ethical Hacking – NPTEL</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="achievements" tabindex="-1">
+          <h2>Achievements & Extracurricular Activities</h2>
+          <div class="enhanced-card">
+            <ul>
+              <li>AP EAMCET 2022 State Rank: 4,200 out of 2.5L+ candidates</li>
+              <li>NTSE 2019 National Rank: 15,000</li>
+              <li>Winner of 2024 College Hackathon (AI Product Detection)</li>
+              <li>100+ volunteer hours through NSS and NGO activities</li>
+              <li>Represented college in inter-college sports meets (cricket, badminton)</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="languages" tabindex="-1">
+          <h2>Languages Known</h2>
+          <div class="enhanced-card">
+            <div class="skills-container">
+              <span class="skill-tag">English</span>
+              <span class="skill-tag">Telugu</span>
             </div>
           </div>
         </section>
-        <section>
-          <div class="experience">
-            <div class="container">
-              <header class="item item-1">Nov 2013 — May 2016</header>
-              <div class="item item-2">
-                <span class="sub-item title">Tech Mahindra</span>
-                <span class="sub-item role">Associate Software Engineer</span>
-                <span class="sub-item desc">
-                  Starting as a fresher, I progressed into a reliable team player adept at handling tasks in production
-                  support for European clients. A significant milestone was my involvement in drafting comprehensive
-                  documentation for new product workflows during a visit to the client's site in Switzerland. I
-                  facilitated collaboration between support and technical teams during outages and escalations, ensuring
-                  swift resolutions. Additionally, I documented existing processes and created Knowledge Transfer (KT)
-                  plans to streamline onboarding for new project members.
-                </span>
-                <span class="sub-item tags">
-                  <ul>
-                    <li>XML</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Javascript</li>
-                  </ul>
-                </span>
-              </div>
-            </div>
+
+        <section id="hobbies" tabindex="-1">
+          <h2>Hobbies & Interests</h2>
+          <div class="enhanced-card">
+            <p>Enjoy sports like cricket and badminton for discipline and teamwork.<br>
+              Passionate about exploring emerging technologies and AI innovations.
+            </p>
           </div>
         </section>
-        <section id="awards">
-          <div id="awards" class="experience">
-            <div class="container">
-              <header class="item item-1" style="padding-right:6px">awards and recognition</header>
-              <div class="desc">
-                <ul>
-                  <li>
-                    <span>
-                      Received Capgemini's 'XtraMile' award for showing dedication and continuous support.
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      Received EMIS Heroes award for showing 'Responsible' values.
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      Received Tech Mahindra's 'SPOT' award for dedication & quick resolution of issues.
-                    </span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
+      </main>
     </div>
-    <div class="top" title="top">
+    <button class="top" id="topButton" title="Back to top" aria-label="Back to top">
       <span>↑</span>
-    </div>
+    </button>
   </div>
-  <script async src="main.js"></script>
+  <script src="main.js" defer></script>
 </body>
-
 </html>
